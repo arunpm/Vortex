@@ -21,6 +21,8 @@ for trend in trends[0]['trends']:
 prompt = hashtags[0]
 
 # Use the GPT-2 model to generate an article based on the prompt
+gpt2.download_gpt2() 
+#to download the "124M" model if its not in the directly 
 model = gpt2.load_model('124M')
 article = gpt2.generate(model, prompt=prompt, max_length=1024, temperature=0.8)
 
